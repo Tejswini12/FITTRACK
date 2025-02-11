@@ -1,0 +1,120 @@
+/* Root container */
+.bmiContainer {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .bmiContainer:hover {
+    transform: scale(1.03);
+  }
+  
+  /* Page Background */
+  .bmiPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    justify-content: center;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    padding: 20px;
+  }
+  
+  /* Heading */
+  .bmiTitle {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  /* Input Fields */
+  .bmiInput {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    text-align: center;
+    outline: none;
+    transition: border 0.3s ease;
+  }
+  
+  .bmiInput:focus {
+    border-color: #00f2fe;
+    box-shadow: 0px 0px 10px rgba(0, 242, 254, 0.6);
+  }
+  
+  /* Button */
+  .bmiButton {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .bmiButton:hover {
+    background: linear-gradient(to right, #00f2fe, #4facfe);
+    transform: scale(1.05);
+    box-shadow: 0px 5px 15px rgba(0, 242, 254, 0.6);
+  }
+  
+  /* Result Box */
+  .bmiResult {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Different Status Colors */
+  .bmiUnderweight {
+    background: #2a9d8f;
+  }
+  
+  .bmiNormal {
+    background: #1d3557;
+  }
+  
+  .bmiOverweight {
+    background: #f4a261;
+  }
+  
+  .bmiObese {
+    background: #e63946;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 500px) {
+    .bmiContainer {
+      padding: 1.5rem;
+    }
+  
+    .bmiTitle {
+      font-size: 1.5rem;
+    }
+  
+    .bmiButton {
+      font-size: 0.9rem;
+    }
+  
+    .bmiResult {
+      font-size: 1rem;
+    }
+  }
+  

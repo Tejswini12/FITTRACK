@@ -1,0 +1,59 @@
+.admin-dashboard {
+    background-image: url("https://source.unsplash.com/1600x900/?gym,workout");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .dashboard-title {
+    font-size: 32px;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .dashboard-row {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .dashboard-card {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    border-radius: 12px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .dashboard-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .dashboard-card .btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .logout-btn {
+    width: 200px;
+    padding: 12px;
+    font-size: 18px;
+    background-color: #dc3545;
+    border: none;
+    transition: 0.3s;
+  }
+  
+  .logout-btn:hover {
+    background-color: #c82333;
+  }
+  

@@ -1,0 +1,86 @@
+/* MainNavBar.css */
+
+/* Navbar Styling */
+.navbar {
+    background-color: #1c1c1c; /* Dark background for the navbar */
+    padding: 15px 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+  }
+  
+  .navbar-brand {
+    font-size: 26px;
+    font-weight: bold;
+    color: #ff6347; /* Tomato color for the logo text */
+  }
+  
+  .navbar-brand .logo-img {
+    height: 45px;
+    width: auto;
+  }
+  
+  .navbar-nav {
+    display: flex;
+    list-style-type: none;
+  }
+  
+  .nav-item {
+    margin: 0 20px;
+  }
+  
+  .nav-link {
+    font-size: 18px;
+    color: #f0f0f0; /* Light grey color */
+    font-weight: 500;
+    text-transform: uppercase; /* Uppercase text for a bolder look */
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out; /* Smooth transition effect */
+  }
+  
+  .nav-link:hover {
+    color: #fff !important; /* White text on hover */
+    background-color: #ff6347; /* Tomato color background on hover */
+    transform: scale(1.1); /* Slight scale up effect on hover */
+  }
+  
+  /* Navbar Active Link Styling */
+  .nav-item.active .nav-link {
+    color: #fff !important;
+    background-color: #ff6347; /* Active item has a tomato background */
+  }
+  
+  /* Profile Icon Styling */
+  .profile-icon i {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #f0f0f0;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .profile-icon:hover i {
+    color: #ff6347;
+  }
+  
+  /* Navbar right side alignment */
+  .navbar-nav.ml-auto {
+    margin-left: auto;
+  }
+  
+  /* Dropdown/Collapsible Menu Styling */
+  .navbar-toggler-icon {
+    background-color: #f0f0f0; /* Light color for the hamburger icon */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 767px) {
+    .navbar-nav {
+      flex-direction: column;
+      text-align: center;
+      margin-top: 15px;
+    }
+  
+    .navbar-nav .nav-item {
+      margin: 10px 0;
+    }
+  }
+  

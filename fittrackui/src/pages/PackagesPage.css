@@ -1,0 +1,72 @@
+/* General Page Styling */
+.packages-container {
+    max-width: 90%;
+    margin: auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Header Styling */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Search Bar */
+  .search-bar {
+    display: flex;
+  }
+  
+  .search-input {
+    padding: 8px 12px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Table Styling */
+  .table {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .table th {
+    background: #007bff;
+    color: white;
+    text-align: center;
+  }
+  
+  .table td, .table th {
+    padding: 12px;
+    text-align: center;
+  }
+  
+  /* Button Styling */
+  .btn {
+    margin: 5px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .btn-warning {
+    background: #ffcc00;
+    color: black;
+  }
+  
+  .btn-danger:hover {
+    background: #d9534f;
+    color: white;
+  }
+  
+  .btn-info:hover {
+    background: #17a2b8;
+    color: white;
+  }
+  
