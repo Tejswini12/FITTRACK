@@ -51,23 +51,7 @@ public class UserDto extends BaseEntityDto{
 	@Column(length = 30)
 	private String password;
 	
-	//constructor
-//	public UserDto(String firstName, String lastName, String email, UserGender gender, String contactNumber,
-//			LocalDate dateOfBirth, int age, String address//, UserType userType, String password
-//			) {
-//		super();
-//		this.firstName = firstName;
-//		LastName = lastName;
-//		this.email = email;
-//		this.gender = gender;
-//		this.contactNumber = contactNumber;
-//		this.dateOfBirth = dateOfBirth;
-//		this.age = age;
-//		this.address = address;
-////		this.userType = userType;
-////		this.password = password;
-//	}
-//	
+	
 	
 	
 	
