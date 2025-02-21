@@ -11,7 +11,7 @@ import lombok.ToString;
 @Getter
 @Setter
 @Entity
-@ToString(callSuper = true)
+@ToString(callSuper = true,exclude="member")
 @NoArgsConstructor
 @Table(name = "memberFeedbacks")
 public class MemberFeedback  extends BaseEntity{
