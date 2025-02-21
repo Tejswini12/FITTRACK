@@ -37,10 +37,10 @@ public class Member extends BaseEntity {
 	private User user;
 
 	@OneToMany
-	@JoinColumn(name = "feedback_id")
+	@JoinColumn(mappedBy = "member", cascade = CascadeType.ALL, orphanRemoval = true,name = "feedback_id")
 	private List<MemberFeedback> feedbacks;
 	
-	@OneToOne(mappedBy = "member", cascade = CascadeType.ALL, orphanRemoval = true,fetch = FetchType.LAZY)
+	@OneToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "package_id")
 	private GymPackage gymPackage;
 	
