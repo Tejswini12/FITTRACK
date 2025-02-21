@@ -24,13 +24,15 @@ public class FitnessTrainer extends BaseEntity{
 	private String phone;
 	@Column(name = "expertise", length = 30)
 	private String expertise;
-	public FitnessTrainer(String trainerName, String email, String phone, String expertise) {
-		super();
-		this.trainerName = trainerName;
-		this.email = email;
-		this.phone = phone;
-		this.expertise = expertise;
-	}
+	@OneToMany(mappedBy = "trainer", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
+    private List<Package> packages;
+
+    public FitnessTrainer(String trainerName, String email, String phone, String expertise) {
+        this.trainerName = trainerName;
+        this.email = email;
+        this.phone = phone;
+        this.expertise = expertise;
+    }
 	
 	
 	
