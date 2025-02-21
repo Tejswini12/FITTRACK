@@ -19,7 +19,7 @@ import lombok.ToString;
 @Getter
 @Setter
 @NoArgsConstructor
-@ToString(callSuper = true,exclude = {"user","gymPackage","feedbackas"})
+@ToString(callSuper = true,exclude = {"user","gymPackage","feedbackas","billPayment"})
 
 @Table(name = "Members")
 public class Member extends BaseEntity {
@@ -44,6 +44,8 @@ public class Member extends BaseEntity {
 	@JoinColumn(name = "package_id")
 	private GymPackage gymPackage;
 	
+	@OneToOne(mappedBy = "member", cascade = CascadeType.ALL, orphanRemoval = true,fetch = FetchType.LAZY)
+  	  private BillPayment billPayment;
 
 	public Member(LocalDate startDate, LocalDate endDate, double fees) {
 		super();
