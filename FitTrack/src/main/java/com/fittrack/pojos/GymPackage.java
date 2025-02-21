@@ -33,9 +33,9 @@ public class GymPackage  extends BaseEntity{
     @JoinColumn(name = "trainer_id", nullable = false)  // Foreign key column
     private FitnessTrainer trainer;
 
-    public Package(String packageName,  String description,PackageType packageType, String packageDuration, FitnessTrainer trainer) {
+    public Package(double price,  String description,PackageType packageType, String packageDuration, FitnessTrainer trainer) {
         super();
-        this.packageName = packageName;
+        this.price =  price;
 	    this.description=description;
         this.packageType = packageType;
         this.packageDuration = packageDuration;
