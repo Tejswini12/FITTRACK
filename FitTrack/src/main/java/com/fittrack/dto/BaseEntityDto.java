@@ -18,13 +18,13 @@ import lombok.ToString;
 public class BaseEntityDto {
 	
 	@JsonProperty(access = Access.READ_ONLY)
-
+	@NotBlank
 	private Long id;
 	@JsonProperty(access = Access.READ_ONLY)
-
+	@NotBlank
 	private LocalDate createdOn;
 	@JsonProperty(access = Access.READ_ONLY)
-
+    	@NotBlank
 	private LocalDateTime updatedOn;
 
 }
