@@ -15,7 +15,7 @@ import lombok.ToString;
 @Getter
 @Setter
 @NoArgsConstructor
-@ToString(callSuper = true,exclude = "memberId")
+@ToString(callSuper = true,exclude = "memberId","trainer")
 @Table(name = "GymPackages")
 public class GymPackage  extends BaseEntity{
 
@@ -29,30 +29,19 @@ public class GymPackage  extends BaseEntity{
 	private PackageType packageType;
 	@Column(name = "package_duration")
 	private int packageDuration;
-	
-	public GymPackage(double price, String description, PackageType packageType, int packageDuration) {
-		super();
-		this.price = price;
-		this.description = description;
-		this.packageType = packageType;
-		this.packageDuration = packageDuration;
-	}
+ @ManyToOne
+    @JoinColumn(name = "trainer_id", nullable = false)  // Foreign key column
+    private FitnessTrainer trainer;
 
-//	public void setPrice(double price) {
-//		this.price = price;
-//	}
-//
-//	public void setDescription(String description) {
-//		this.description = description;
-//	}
-//
-//	public void setPackageType(PackageType packageType) {
-//		this.packageType = packageType;
-//	}
-	
-	//trainers package relation ship
-	//pkg--trainer
-	//many to one
+    public Package(String packageName, PackageType packageType, String packageDuration, FitnessTrainer trainer) {
+        super();
+        this.packageName = packageName;
+        this.packageType = packageType;
+        this.packageDuration = packageDuration;
+        this.trainer = trainer;
+    }
+
+
 	
 	
 	
