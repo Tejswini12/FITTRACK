@@ -19,7 +19,7 @@ import lombok.ToString;
 @Getter
 @Setter
 @NoArgsConstructor
-@ToString(callSuper = true,exclude = {"user","gymPackage"})
+@ToString(callSuper = true,exclude = {"user","gymPackage","feedbackas"})
 
 @Table(name = "Members")
 public class Member extends BaseEntity {
@@ -36,9 +36,9 @@ public class Member extends BaseEntity {
 	@JoinColumn(name = "user_id")
 	private User user;
 
-//	@OneToMany
-//	@JoinColumn(name = "feedback_id")
-//	private List<MemberFeedback> feedbacks;
+	@OneToMany
+	@JoinColumn(name = "feedback_id")
+	private List<MemberFeedback> feedbacks;
 	
 	@OneToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "package_id")
