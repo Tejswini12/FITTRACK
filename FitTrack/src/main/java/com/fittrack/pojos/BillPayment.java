@@ -30,15 +30,18 @@ public class BillPayment extends BaseEntity {
 		this.amount = amount;
 	}
 
-	public BillPayment(LocalDate date, double amount, LocalDate paymentDate) {
-		super();
-		this.date = date;
-		this.amount = amount;
-		this.paymentDate = paymentDate;
-	}
+	  @OneToOne
+    @JoinColumn(name = "member_id", nullable = false, unique = true) // Foreign key column
+    private Member member;
+
+    public BillPayment(LocalDate date, double amount, LocalDate paymentDate, Member member) {
+        super();
+        this.date = date;
+        this.amount = amount;
+        this.paymentDate = paymentDate;
+        this.member = member;
+    }
 	
-	//member to billpayment
-	//1 to 1
 	
 	
 	
